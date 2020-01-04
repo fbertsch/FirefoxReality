@@ -73,6 +73,8 @@ protected:
   void DrawLoadingAnimation();
   void DrawSplashAnimation();
   void CreateSkyBox(const std::string& aBasePath, const std::string& aExtension);
+  void CreateFloor();
+
 private:
   State& m;
   BrowserWorld() = delete;

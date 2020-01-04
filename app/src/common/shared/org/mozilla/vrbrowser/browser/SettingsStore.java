@@ -16,7 +16,6 @@ import org.mozilla.telemetry.TelemetryHolder;
 import org.mozilla.vrbrowser.R;
 import org.mozilla.vrbrowser.telemetry.GleanMetricsService;
 import org.mozilla.vrbrowser.telemetry.TelemetryWrapper;
-import org.mozilla.vrbrowser.utils.DeviceType;
 import org.mozilla.vrbrowser.utils.LocaleUtils;
 import org.mozilla.vrbrowser.utils.StringUtils;
 import org.mozilla.vrbrowser.utils.SystemUtils;
@@ -396,9 +395,9 @@ public class SettingsStore {
     }
 
     public boolean getLayersEnabled() {
-        if (DeviceType.isOculusBuild()) {
-            return true;
-        }
+//        if (DeviceType.isOculusBuild()) {
+//            return true;
+//        }
         return false;
     }
 
