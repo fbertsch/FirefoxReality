@@ -1507,7 +1507,10 @@ public class CustomKeyboardView extends View implements View.OnClickListener {
             }
 
         } else if (key.codes[0] == CustomKeyboard.KEYCODE_SHIFT) {
-            mInMultiTap = true;
+            if (eventTime < mLastTapTime + MULTITAP_INTERVAL
+                    && keyIndex == mLastSentIndex) {
+                mInMultiTap = true;
+            }
         }
 
         if (eventTime > mLastTapTime + MULTITAP_INTERVAL || keyIndex != mLastSentIndex) {
