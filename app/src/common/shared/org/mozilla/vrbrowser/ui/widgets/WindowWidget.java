@@ -1549,6 +1549,10 @@ public class WindowWidget extends UIWidget implements SessionChangeListener,
     public void onPageStart(@NonNull GeckoSession geckoSession, @NonNull String s) {
         mCaptureOnPageStop = true;
 
+        if (!getSession().isUserInitiatedNavigation()) {
+            return;
+        }
+
         if (isHistoryVisible()) {
             hideHistory();
         }
